@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OACC - Oslo Akershus Car Communication</title>
-  <meta name="description" content="Profesjonelt monteringsverksted i Oslo. Taksameter, folering, polering, coating, batteribyte og gummitrekk. Vi hjelper privatpersoner og bedrifter.">
+  <title>OACC – Monteringsverksted for taxi og bilpleie i Oslo</title>
+  <meta name="description" content="OACC er Oslos spesialiserte monteringsverksted. Taksameter, folering, coating, polering, elbil-batteri og gummitrekk. For taxieiere, sentraler, bedrifter og private.">
+  <meta name="keywords" content="taksameter montering Oslo, folering bil Oslo, coating bil, polering Oslo, elbil batteri, taxiutstyr, monteringsverksted Tveita">
+  <meta property="og:title" content="OACC – Monteringsverksted for taxi og bilpleie i Oslo">
+  <meta property="og:description" content="Spesialisert monteringsverksted på Tveita. Taksameter, folering, coating og mer. For taxi, bedrift og privat.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">OACC</a>
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-text">OACC</span>
+        <span class="logo-sub">Oslo Akershus Car Communication</span>
+      </a>
       <button class="nav-toggle" id="navToggle" aria-label="Meny">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#tjenester">Tjenester</a></li>
-        <li><a href="#om-oss">Om oss</a></li>
-        <li><a href="#galleri">Galleri</a></li>
+        <li><a href="#taxi">Taxi</a></li>
+        <li><a href="#hvorfor">Hvorfor oss</a></li>
+        <li><a href="#prosess">Prosess</a></li>
         <li><a href="#kontakt" class="nav-cta">Kontakt oss</a></li>
       </ul>
     </div>
@@ -30,105 +38,304 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-label">Monteringsverksted i Oslo</p>
-      <h1 class="hero-title">Profesjonell montering<br>og bilpleie</h1>
-      <p class="hero-desc">Fra taksameter til fullfolering. Vi leverer kvalitetsarbeid for privatpersoner og bedrifter i Oslo og Akershus.</p>
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">Monteringsverksted på Tveita, Oslo</div>
+      <h1 class="hero-title">
+        Bilen din fortjener<br>
+        <span class="hero-highlight">spesialister.</span>
+      </h1>
+      <p class="hero-desc">Vi monterer taksameterutstyr, folierer, polerer og coater. Alt fra elbil-batteri til komplett taxi-oppsett. Gjort riktig, levert til avtalt tid.</p>
       <div class="hero-actions">
-        <a href="#kontakt" class="btn btn-primary">Bestill time</a>
-        <a href="#tjenester" class="btn btn-outline">Se tjenester</a>
+        <a href="#kontakt" class="btn btn-accent">
+          <span>Bestill time</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tel:+47XXXXXXXX" class="btn btn-glass">Ring oss direkte</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">6</span>
+          <span class="hero-stat-label">Spesialtjenester</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">B2B + B2C</span>
+          <span class="hero-stat-label">Bedrift og privat</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Oslo</span>
+          <span class="hero-stat-label">Tveita</span>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- TJENESTER -->
-  <section class="section" id="tjenester">
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
     <div class="container">
-      <p class="section-label">Hva vi tilbyr</p>
-      <h2 class="section-title">Tjenester</h2>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Taksameterutstyr</h3>
-          <p>Montering, oppsett og service av taksameter og tilknyttet utstyr. Godkjent arbeid for alle taxisentraler.</p>
+      <div class="trust-items">
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Kvalitetsgaranti</span>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3>Folering</h3>
-          <p>Helfolering, delfolering og dekor. Vi folierer personbiler, firmabiler og taxier med kvalitetsfolie.</p>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Levert til avtalt tid</span>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <h3>Gummitrekk</h3>
-          <p>Legging av gummitrekk for gulv og bagasjerom. Beskytter bilen og gir et ryddig, profesjonelt utseende.</p>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Privat og bedrift</span>
         </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <h3>Elbil-batteri</h3>
-          <p>Feilsøking, reparasjon og bytte av batteripakker på elbiler. Vi jobber med alle merker.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 3v9l6-3"/></svg>
-          </div>
-          <h3>Polering</h3>
-          <p>Profesjonell maskinpolering som fjerner riper, oksidasjon og gjenskaper gløden i lakken.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Coating</h3>
-          <p>Keramisk coating som gir langvarig beskyttelse mot vann, smuss og UV-stråling. Holder i flere år.</p>
+        <div class="trust-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Tveita, Oslo</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- OM OSS -->
-  <section class="section section-dark" id="om-oss">
+  <!-- TAXI SPESIALIST -->
+  <section class="section section-taxi" id="taxi">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <p class="section-label">Om OACC</p>
-          <h2 class="section-title">Verkstedet på Tveita</h2>
-          <p>OACC (Oslo Akershus Car Communication) er et monteringsverksted som holder til på Tveita i Oslo. Vi spesialiserer oss på taksameterutstyr, folering, bilpleie og elbilbatterier.</p>
-          <p>Vi jobber med privatpersoner, taxieiere, taxisentraler og bedrifter med bilflåter. Uansett om du trenger montering av nytt taksameter, fullfolering av firmabilen eller en grundig polering - vi leverer kvalitet til avtalt tid.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">Oslo</span>
-              <span class="stat-label">Tveita</span>
+      <div class="taxi-grid">
+        <div class="taxi-content">
+          <div class="section-eyebrow">Norges taxi-spesialister</div>
+          <h2 class="section-heading">Vi kjenner taxi-bransjen<br>fra innsiden.</h2>
+          <p class="section-text">OACC er bygget rundt behovene til taxieiere, sentraler og sjaforer. Vi vet at en bil som star stille koster penger. Derfor prioriterer vi rask levering og riktig montering forste gang.</p>
+          <ul class="taxi-features">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Komplett taksameter-montering</strong>
+                <span>Godkjent oppsett for alle sentraler i Oslo og Akershus</span>
+              </div>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Taxi-profilering og folering</strong>
+                <span>Korrekt profilering etter sentralens krav</span>
+              </div>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Rask snuoperasjon</strong>
+                <span>Vi forstaar at bilen maa tilbake i drift raskt</span>
+              </div>
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <div>
+                <strong>Erfaring med alle merker</strong>
+                <span>Tesla, Toyota, Mercedes, VW, Skoda og flere</span>
+              </div>
+            </li>
+          </ul>
+          <a href="#kontakt" class="btn btn-accent">
+            <span>Bestill taxi-montering</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="taxi-visual">
+          <div class="taxi-card-stack">
+            <div class="taxi-card">
+              <div class="taxi-card-icon">01</div>
+              <h4>Taksameter</h4>
+              <p>Montering, kalibrering og service av godkjent taksameterutstyr</p>
             </div>
-            <div class="stat">
-              <span class="stat-number">6</span>
-              <span class="stat-label">Tjenester</span>
+            <div class="taxi-card">
+              <div class="taxi-card-icon">02</div>
+              <h4>Takskilt og lys</h4>
+              <p>Montering av takskilt, LED-lys og sentralens visuelle krav</p>
             </div>
-            <div class="stat">
-              <span class="stat-number">B2B + B2C</span>
-              <span class="stat-label">Privat og bedrift</span>
+            <div class="taxi-card">
+              <div class="taxi-card-icon">03</div>
+              <h4>Betaling og kvittering</h4>
+              <p>Oppsett av betalingsterminal og kvitteringssystem</p>
+            </div>
+            <div class="taxi-card">
+              <div class="taxi-card-icon">04</div>
+              <h4>Komplett pakke</h4>
+              <p>Alt du trenger for aa faa bilen godkjent og klar til drift</p>
             </div>
           </div>
         </div>
-        <div class="about-image">
-          <div class="about-image-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            <span>Bilde av verkstedet</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TJENESTER -->
+  <section class="section" id="tjenester">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-eyebrow">Tjenester</div>
+        <h2 class="section-heading">Alt bilen din trenger. Ett verksted.</h2>
+        <p class="section-text-center">Seks spesialtjenester under ett tak. Hver enkelt utfort med presisjon og fagkunnskap.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card service-card-featured">
+          <div class="service-num">01</div>
+          <h3>Taksameterutstyr</h3>
+          <p>Komplett montering og service av taksameter, takskilt, betalingsterminal og tilhorende utstyr. Godkjent for alle sentraler.</p>
+          <div class="service-tag">Mest etterspurt</div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3>Folering</h3>
+          <p>Helfolering, delfolering og bedriftsprofilering. Vi bruker folie av hoyeste kvalitet og leverer et resultat som varer.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3>Polering</h3>
+          <p>Profesjonell maskinpolering som fjerner riper, oksidasjon og slitasje. Lakken faar tilbake dybden og glansenl</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3>Coating</h3>
+          <p>Keramisk coating som beskytter lakken mot vann, smuss, UV og kjemikalier. Holder i flere aar med riktig vedlikehold.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">05</div>
+          <h3>Elbil-batteri</h3>
+          <p>Feilsoking, reparasjon og bytte av batteripakker. Vi jobber med Tesla, Nissan, VW, BMW og andre elbilmerker.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">06</div>
+          <h3>Gummitrekk</h3>
+          <p>Skreddersydd gummitrekk for gulv og bagasjerom. Beskytter bilen og gir et ryddig, profesjonelt interioor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HVORFOR OSS -->
+  <section class="section section-alt" id="hvorfor">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-eyebrow">Hvorfor OACC</div>
+        <h2 class="section-heading">Det handler om aa gjore det riktig.</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
+          <h3>Gjort riktig forste gang</h3>
+          <p>Vi tar oss tid til aa gjore jobben ordentlig. Det betyr at du slipper aa komme tilbake for aa fikse noe som burde vaert gjort riktig fra start.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Levert til avtalt tid</h3>
+          <p>Saerlig for taxi vet vi at tid er penger. Vi gir deg en realistisk tidsramme og holder den. Ingen overraskelser.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Spesialkompetanse</h3>
+          <p>Vi er ikke et generelt verksted. Vi spesialiserer oss paa montering, folering og bilpleie. Det er det vi kan best.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Privat, bedrift og taxi</h3>
+          <p>Vi betjener alt fra privatpersoner med en bil til taxisentraler og bedrifter med store flaater. Samme kvalitet, uansett storrelse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HVEM VI HJELPER -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-eyebrow">Kunder</div>
+        <h2 class="section-heading">Vi hjelper de som tar bilen paa alvor.</h2>
+      </div>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Taxieiere og loyvehavere</h3>
+          <p>Komplett oppsett fra taksameter til profilering. Vi vet hva som kreves og leverer bilen klar til drift.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Taxisentraler</h3>
+          <p>Volum og konsistens. Vi haandterer flere biler med samme kvalitet og kan tilpasse oss sentralens tidsplan.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Bedrifter med bilflaater</h3>
+          <p>Folering, profilering og vedlikehold av firmabiler. Vi sikrer at flaaten ser profesjonell ut hele tiden.</p>
+        </div>
+        <div class="audience-card">
+          <div class="audience-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Privatpersoner</h3>
+          <p>Folering, polering, coating eller batterijobb paa din egen bil. Samme kvalitet som vi leverer til proffer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSESS -->
+  <section class="section section-alt" id="prosess">
+    <div class="container">
+      <div class="section-header-center">
+        <div class="section-eyebrow">Slik jobber vi</div>
+        <h2 class="section-heading">Fra henvendelse til ferdig jobb.</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <h3>Kontakt</h3>
+          <p>Send oss en henvendelse eller ring. Fortell hva du trenger, saa gir vi deg et raskt svar.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <h3>Tilbud</h3>
+          <p>Du faar et tydelig tilbud med pris og tidsestimat. Ingen skjulte kostnader.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <h3>Utforelse</h3>
+          <p>Vi utforer jobben til avtalt tid. Du holdes oppdatert underveis hvis noe endres.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <h3>Levering</h3>
+          <p>Bilen leveres tilbake i topp stand. Vi gaar gjennom arbeidet sammen for du henter.</p>
         </div>
       </div>
     </div>
@@ -137,97 +344,147 @@
   <!-- GALLERI -->
   <section class="section" id="galleri">
     <div class="container">
-      <p class="section-label">Arbeid vi har gjort</p>
-      <h2 class="section-title">Galleri</h2>
+      <div class="section-header-center">
+        <div class="section-eyebrow">Vaart arbeid</div>
+        <h2 class="section-heading">Resultater som snakker for seg.</h2>
+        <p class="section-text-center">Bildene erstattes med ekte bilder fra verkstedet.</p>
+      </div>
+
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <div class="gallery-placeholder">Taksameter-montering</div>
+        <div class="gallery-item gallery-large">
+          <div class="gallery-placeholder"><span>Taksameter-montering</span></div>
         </div>
         <div class="gallery-item">
-          <div class="gallery-placeholder">Helfolering</div>
+          <div class="gallery-placeholder"><span>Helfolering</span></div>
         </div>
         <div class="gallery-item">
-          <div class="gallery-placeholder">Polering og coating</div>
+          <div class="gallery-placeholder"><span>Polering</span></div>
         </div>
         <div class="gallery-item">
-          <div class="gallery-placeholder">Gummitrekk</div>
+          <div class="gallery-placeholder"><span>Coating</span></div>
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder">Elbil-batteri</div>
-        </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder">Dekorfolering</div>
+        <div class="gallery-item gallery-large">
+          <div class="gallery-placeholder"><span>Taxi komplett oppsett</span></div>
         </div>
       </div>
-      <p class="gallery-note">Bildene erstattes med ekte bilder fra verkstedet.</p>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Klar for aa komme i gang?</h2>
+          <p>Ta kontakt i dag, saa finner vi en tid som passer.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#kontakt" class="btn btn-accent">
+            <span>Send henvendelse</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:+47XXXXXXXX" class="btn btn-white-outline">Ring oss</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- KONTAKT -->
-  <section class="section section-dark" id="kontakt">
+  <section class="section section-alt" id="kontakt">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="section-label">Ta kontakt</p>
-          <h2 class="section-title">Bestill time eller send henvendelse</h2>
-          <p>Vi svarer vanligvis innen en virkedag. Du kan også ringe oss direkte.</p>
+          <div class="section-eyebrow">Kontakt</div>
+          <h2 class="section-heading">La oss snakke om<br>hva du trenger.</h2>
+          <p class="section-text">Fyll ut skjemaet eller ring oss direkte. Vi svarer vanligvis innen noen timer paa hverdager.</p>
 
           <div class="contact-details">
             <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
               <div>
-                <strong>Adresse</strong>
+                <strong>Besoksadresse</strong>
                 <p>Tveita, Oslo</p>
               </div>
             </div>
             <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
               <div>
                 <strong>Telefon</strong>
-                <p><a href="tel:+47XXXXXXXX">Legg til nummer</a></p>
+                <p><a href="tel:+47XXXXXXXX">+47 XX XX XX XX</a></p>
               </div>
             </div>
             <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div class="contact-item-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
               <div>
                 <strong>E-post</strong>
                 <p><a href="mailto:post@oacc.no">post@oacc.no</a></p>
               </div>
             </div>
           </div>
+
+          <div class="contact-hours">
+            <strong>Apningstider</strong>
+            <p>Mandag - fredag: 08:00 - 17:00<br>Lordag: Etter avtale</p>
+          </div>
         </div>
 
         <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <label for="name">Navn</label>
-            <input type="text" id="name" name="name" required placeholder="Ditt navn">
+          <h3 class="form-title">Send henvendelse</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Navn *</label>
+              <input type="text" id="name" name="name" required placeholder="Ditt fulle navn">
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" placeholder="+47">
+            </div>
           </div>
           <div class="form-group">
-            <label for="email">E-post</label>
+            <label for="email">E-post *</label>
             <input type="email" id="email" name="email" required placeholder="din@epost.no">
           </div>
-          <div class="form-group">
-            <label for="phone">Telefon</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ditt telefonnummer">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Tjeneste</label>
+              <select id="service" name="service">
+                <option value="">Velg tjeneste</option>
+                <option value="taksameter">Taksameterutstyr</option>
+                <option value="folering">Folering</option>
+                <option value="polering">Polering</option>
+                <option value="coating">Coating</option>
+                <option value="elbil-batteri">Elbil-batteri</option>
+                <option value="gummitrekk">Gummitrekk</option>
+                <option value="taxi-komplett">Taxi komplett pakke</option>
+                <option value="annet">Annet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="customer-type">Kundetype</label>
+              <select id="customer-type" name="customer-type">
+                <option value="">Velg type</option>
+                <option value="privat">Privat</option>
+                <option value="taxi">Taxieier / loyvehaver</option>
+                <option value="sentral">Taxisentral</option>
+                <option value="bedrift">Bedrift</option>
+              </select>
+            </div>
           </div>
           <div class="form-group">
-            <label for="service">Tjeneste</label>
-            <select id="service" name="service">
-              <option value="">Velg tjeneste</option>
-              <option value="taksameter">Taksameterutstyr</option>
-              <option value="folering">Folering</option>
-              <option value="gummitrekk">Gummitrekk</option>
-              <option value="elbil-batteri">Elbil-batteri</option>
-              <option value="polering">Polering</option>
-              <option value="coating">Coating</option>
-              <option value="annet">Annet</option>
-            </select>
+            <label for="message">Melding *</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Beskriv hva du trenger. Jo mer detaljer, jo raskere kan vi gi deg et godt svar."></textarea>
           </div>
-          <div class="form-group">
-            <label for="message">Melding</label>
-            <textarea id="message" name="message" rows="4" required placeholder="Fortell oss hva du trenger..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send henvendelse</button>
+          <button type="submit" class="btn btn-accent btn-full">
+            <span>Send henvendelse</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note">Vi svarer vanligvis innen samme virkedag.</p>
           <div class="form-status" id="formStatus"></div>
         </form>
       </div>
@@ -237,31 +494,45 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
+      <div class="footer-top">
+        <div class="footer-brand">
           <h3 class="footer-logo">OACC</h3>
-          <p class="footer-desc">Oslo Akershus Car Communication<br>Monteringsverksted, Tveita, Oslo</p>
+          <p>Oslo Akershus Car Communication</p>
+          <p>Monteringsverksted paa Tveita, Oslo.</p>
+          <p>Spesialisert paa taxi, folering og bilpleie.</p>
         </div>
-        <div>
+        <div class="footer-col">
           <h4>Tjenester</h4>
           <ul>
             <li><a href="#tjenester">Taksameterutstyr</a></li>
             <li><a href="#tjenester">Folering</a></li>
-            <li><a href="#tjenester">Gummitrekk</a></li>
+            <li><a href="#tjenester">Polering</a></li>
+            <li><a href="#tjenester">Coating</a></li>
             <li><a href="#tjenester">Elbil-batteri</a></li>
-            <li><a href="#tjenester">Polering og coating</a></li>
+            <li><a href="#tjenester">Gummitrekk</a></li>
           </ul>
         </div>
-        <div>
+        <div class="footer-col">
+          <h4>Kunder</h4>
+          <ul>
+            <li><a href="#taxi">Taxieiere</a></li>
+            <li><a href="#taxi">Taxisentraler</a></li>
+            <li><a href="#kontakt">Bedrifter</a></li>
+            <li><a href="#kontakt">Privatpersoner</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
           <h4>Kontakt</h4>
           <ul>
             <li>Tveita, Oslo</li>
             <li><a href="mailto:post@oacc.no">post@oacc.no</a></li>
+            <li><a href="tel:+47XXXXXXXX">+47 XX XX XX XX</a></li>
+            <li>Man-fre: 08-17</li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 OACC. Alle rettigheter reservert.</p>
+        <p>&copy; 2026 OACC – Oslo Akershus Car Communication. Alle rettigheter reservert.</p>
       </div>
     </div>
   </footer>
