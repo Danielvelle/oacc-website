@@ -1,105 +1,52 @@
-// ── Mobile nav ──
+// Nav toggle
 const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+const navMenu = document.getElementById('navMenu');
 
 navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  navToggle.classList.toggle('active');
+  navMenu.classList.toggle('open');
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.classList.remove('active');
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navMenu.classList.remove('open'));
+});
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 72, behavior: 'smooth' }); }
   });
 });
 
-// ── Smooth scroll ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
-
-// ── Nav background on scroll ──
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
-    nav.style.borderBottomColor = 'rgba(30, 30, 40, 1)';
-  } else {
-    nav.style.borderBottomColor = 'rgba(30, 30, 40, 0.5)';
-  }
-});
-
-// ── Contact form ──
-const form = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-
-form.addEventListener('submit', async (e) => {
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
-
-  const data = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    phone: form.phone.value.trim(),
-    service: form.service.value,
-    customerType: form.querySelector('#customer-type').value,
-    message: form.message.value.trim(),
-  };
-
-  if (!data.name || !data.email || !data.message) {
-    formStatus.textContent = 'Fyll inn alle obligatoriske felter.';
-    formStatus.className = 'form-status error';
+  const f = e.target;
+  const d = { name: f.name.value, email: f.email.value, phone: f.phone.value, service: f.service.value, ctype: f.ctype.value, message: f.message.value };
+  if (!d.name || !d.email || !d.message) {
+    document.getElementById('formStatus').textContent = 'Fyll inn alle obligatoriske felter.';
+    document.getElementById('formStatus').style.color = '#f87171';
     return;
   }
-
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const originalHTML = submitBtn.innerHTML;
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = '<span>Sender...</span>';
-
-  try {
-    const subject = encodeURIComponent(
-      `Henvendelse fra ${data.name}${data.service ? ` – ${data.service}` : ''}`
-    );
-    const body = encodeURIComponent(
-      `Navn: ${data.name}\nE-post: ${data.email}\nTelefon: ${data.phone || 'Ikke oppgitt'}\nTjeneste: ${data.service || 'Ikke valgt'}\nKundetype: ${data.customerType || 'Ikke valgt'}\n\nMelding:\n${data.message}`
-    );
-
-    window.location.href = `mailto:post@oacc.no?subject=${subject}&body=${body}`;
-
-    formStatus.textContent = 'E-postklienten din skal ha aapnet seg. Hvis ikke, send direkte til post@oacc.no';
-    formStatus.className = 'form-status success';
-    form.reset();
-  } catch (err) {
-    formStatus.textContent = 'Noe gikk galt. Send direkte til post@oacc.no';
-    formStatus.className = 'form-status error';
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalHTML;
-  }
+  const s = encodeURIComponent(`Henvendelse fra ${d.name}${d.service ? ' – ' + d.service : ''}`);
+  const b = encodeURIComponent(`Navn: ${d.name}\nE-post: ${d.email}\nTelefon: ${d.phone || 'Ikke oppgitt'}\nTjeneste: ${d.service || 'Ikke valgt'}\nKundetype: ${d.ctype || 'Ikke valgt'}\n\nMelding:\n${d.message}`);
+  window.location.href = `mailto:post@oacc.no?subject=${s}&body=${b}`;
+  document.getElementById('formStatus').textContent = 'E-postklienten din skal ha åpnet seg.';
+  document.getElementById('formStatus').style.color = '#4ade80';
+  f.reset();
 });
 
-// ── Intersection Observer for fade-in ──
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+// Fade-in on scroll
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); } });
+}, { threshold: 0.08 });
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, observerOptions);
-
-document.querySelectorAll('.service-card, .why-card, .audience-card, .taxi-card, .process-step').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
+document.querySelectorAll('.svc-card,.svc-featured,.why-point,.aud-card,.proc-step,.gal-inner,.hero-card').forEach(el => {
+  el.classList.add('fade-target');
+  obs.observe(el);
 });
+
+// Add fade CSS dynamically
+const style = document.createElement('style');
+style.textContent = `.fade-target{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}.fade-target.vis{opacity:1;transform:translateY(0)}`;
+document.head.appendChild(style);
